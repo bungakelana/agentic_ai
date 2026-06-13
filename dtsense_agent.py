@@ -77,7 +77,7 @@ def vectorstore_node(state: GraphState):
     return {"docs": docs}
 
 combine_prompt = ChatPromptTemplate.from_messages([
-    ("system", "Answer the question based on the provided context. please don't make up answers if the information is not available in the context and answer with 'I don't know'."),
+    ("system", "Answer the question based on the provided context. please don't make up answers if the information is not available in the context and answer with 'I don't know'. Please be precise to check the correct date of today"),
     ("human", "Question: {query}\n\nContext:\n{context}")
 ])
 
